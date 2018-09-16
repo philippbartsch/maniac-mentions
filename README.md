@@ -6,7 +6,7 @@ Old school Point-and-Click Adventure Game | [maniac-mentions.com](https://maniac
 - HTML5/JavaScript
 - for desktop browsers (pointing device recommended)
 - pixel graphics
-- english, german test
+- english, german
 
 ## Used JS-Libraries
 - asset preloader: [PxLoader](http://thinkpixellab.com/pxloader/)
