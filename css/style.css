@@ -1,0 +1,566 @@
+@font-face {
+    font-family: 'minecraftia';
+    src: url('minecraftia.woff') format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('openSans-semiBold.woff') format('woff');
+}
+
+body {
+    background: #111;
+    color: #bbb;
+    /*background: url(../img/bg_4.jpg);*/
+    /*background-position: center bottom;*/
+    /*background-repeat: no-repeat;*/
+    font: 10pt 'Open Sans', sans-serif;
+    margin: 0;
+    /*padding-top: 5%;*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p {
+    /*display: block;*/
+    /*-webkit-margin-before: .5em;*/
+    /*-webkit-margin-after: .5em;*/
+    /*margin: 0px;*/
+    /*padding-bottom: 10px;*/
+}
+
+h1, h2, h3 {
+    display: none;
+}
+
+h4 {
+    /*line-height: 1em;*/
+    margin: 0px;
+    /*margin: 0px 0px .5em 0px;*/
+    font-weight: normal;
+    /*font-size: 1.1em;*/
+    color: #40d2f2; /*#248DA4;*/
+}
+
+h4 + h4 {
+    margin-top: 1em;
+}
+
+img.external_link_img {
+    position: relative;
+    top: 2px;
+}
+
+div#skyline_footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background: url(../img/bg_00.png) repeat-x;
+    /*position: fixed;*/
+    bottom: 0;
+    /*border: 1px solid red;*/
+    /*display: none;*/
+    z-index: -1;
+}
+
+div#imprint_link {
+    position: absolute;
+    bottom: 4px;
+    right: 52px;
+    color: #444 ;
+    /*font-size: .9em;*/
+}
+
+div#visitor_count {
+    position: absolute;
+    bottom: 4px;
+    left: 6px;
+    color: #333;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+div#version {
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    color: #444 ;
+    /*font-size: .9em;*/
+}
+
+div.back_link {
+    background: #262626;
+    position: fixed;
+    bottom: 7px;
+    right: 7px;
+    color: #777;
+    /*font-size: .9em;*/
+    padding: 5px 10px 5px 10px;
+}
+
+div.imprint_screen {
+    font: 1em 'Open Sans', sans-serif;
+    color: #bbb;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+    display: none;
+    /*border: 1px solid red;*/
+}
+
+div.imprint_screen .tiles_row {
+    float: left;
+    width: 100%;
+    /*border: 1px solid red;*/
+    /*height: 200px;*/
+    /*text-align: left;*/
+}
+
+div.imprint_screen .tiles {
+    /*font: 1em 'Open Sans', sans-serif;*/
+    position: relative;
+    margin: 20px 0px 0px 20px;
+    padding: 10px 16px 15px 15px;
+    background: #262626;
+    display: inline-block;
+    /*float: left;*/
+    max-width: 23%;
+    min-width: 150px;
+    /*border: 1px solid #666;*/
+    overflow: hidden;
+}
+
+div.imprint_screen .tiles a { 
+    text-decoration: none;
+    color: #777;
+}
+
+div.imprint_screen .tiles a:hover { 
+    text-decoration: underline;
+    color: #bbb;
+}
+
+div.imprint_screen .tiles p {
+    margin-bottom: 0px;
+}
+
+.grey_txt {
+    color: #777;
+}
+
+.darkgrey_txt {
+    color: #444;
+}
+
+.darkred_txt {
+    color:  #aa4444;
+    font-size: 0.7em;
+}
+
+.larger_txt {
+    font-size: 1.2em;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+div#mobile_screen {
+    position: absolute;
+    width: 100%;
+    /*min-width: 1026px;*/
+    height: 100%;
+    min-height: 800px;
+    background: #111;
+    font: 1.2em 'Open Sans', sans-serif;
+    color: #ddd;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+    display: none;
+}
+
+div#mobile_screen div {
+    padding: 5% 10%;
+}
+
+div#mobile_screen hr {
+     border: 0;
+     height: 1px;
+     background: #555;
+}
+
+button#mobileBtn {
+    background-color: #aa4444;
+    border: 2px solid #ff9898;
+    color: #ffc5c5;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: bold 1em 'Open Sans', sans-serif;
+    width: 100%;
+    margin: 0px 0px 8px 0px;
+}
+
+div#loading_screen {
+    position: absolute;
+    width: 100%;
+    /*min-width: 1026px;*/
+    height: 100%;
+    background: #111;
+    top: 0px;
+    left: 0px;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*border: 1px solid red;*/
+    /*display: none;*/
+    z-index: 100;
+    /*opacity: 0;*/
+    /*text-align: center;*/
+}
+
+div#loading_counter {
+    position: relative;
+    /*width: 984px;*/
+    height: 338px;
+    margin: 4% auto 0 auto;
+    border: 1px solid #222;
+    font-family: minecraftia, sans-serif;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-size: 10pt;
+    color: #bbb;
+    text-align: center;
+    /*overflow: hidden;*/
+    padding: 260px 20px 0 20px;
+    display: none;
+}
+
+div#loading_bar_container {
+    position: relative;
+    top: -310px;
+    /*width: 980px;*/
+    height: 5px;
+    margin: auto;
+    /*border: 1px solid red;*/
+    color: #bbb;
+    background: #222;
+    overflow: hidden;
+    dsiplay: none;
+}
+
+div#loading_bar {
+    position: relative;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    margin: auto;
+    /*border: 1px solid red;*/
+    color: #bbb;
+    background: #444;
+}           
+
+.loaded {
+    opacity: 0;
+    -webkit-transition: all 1s ease-out; 
+            transition: all 1s ease-out;
+    visibility: hidden;
+    /*display: none;*/
+}
+
+div#container {
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    z-index: 1;
+    position: relative;
+    /*top: 80px;*/
+    margin: 4% auto 0 auto;
+    /*margin: 20px;*/
+    width: 1024px;
+    height: 598px;
+    font-family: "minecraftia";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    margin-bottom: 10px;
+    display: none;
+}
+
+div#mouseFollow {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    border: 1px solid #444;
+    padding: 2px 3px 1px 5px;
+    color: #bbb;
+    background-color: #333;
+    z-index: 10;
+    max-width: 200px;
+    height: 16px;
+    font-family: "minecraftia";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-size: 9pt;
+}
+
+div#control3 {
+    font-size: 0.7em;
+}
+
+/* canvas {
+    font-family: minecraftia;
+    font-size: 12px;
+    font-weight: normal;
+}*/
+
+canvas.canvas0 {
+    /*border: 1px solid #333;*/
+    z-index: 2;
+    /*background: #333;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*cursor: crosshair;*/
+}
+
+canvas.canvas1 {
+    /*border: 1px solid red;*/
+    /*display: none;*/
+    z-index: 3;
+    /*background: #222;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*cursor: default;*/
+}
+
+canvas.canvas2 {
+    /*border: 1px solid red;*/
+    display: none;
+    z-index: 4;
+    /*background: #222;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+canvas.canvas3 {
+    /*border: 1px solid red;*/
+    /*display: none;*/
+    z-index: 5;
+    background: #000;
+    /*filter: blur(4px);*/
+    position: absolute;
+/*                top: 480px;
+    left: 112px;*/
+    opacity: 0.6;
+}
+
+#glitch {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100vh;
+      background: url(../img/glitch_00.png);
+      background-size: cover;
+      z-index: 98;
+      display: none;
+}
+ 
+#glitch2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url(../img/glitch_00.png);
+      background-size: cover;
+      opacity: 0.5;
+      /*mix-blend-mode: hard-light;*/
+      z-index: 99;
+      animation: animate .2s infinite;
+      display: none;
+}
+ 
+/*            #glitch:hover:before {
+      animation: animate .2s infinite;
+}*/
+ 
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    10% { background-position: 4px 0;
+    }
+    20% { background-position: -4px 0;
+    }
+    30% { background-position: 12px 0;
+    }
+    40% { background-position: -16px 0;
+    }
+    50% { background-position: -24px 0;
+    }
+    60% { background-position: -52px 0;
+    }
+    70% { background-position: 0 22px;
+    }
+    80% { background-position: -40px -10px;
+    }
+    100% {
+        background-position: 0 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
+.playtest {
+    z-index: 10;
+    display: none;
+}
+
+div#input_panel {
+    z-index: 6;
+    /*border: 1px solid red;*/
+    /*background: #333;*/
+    position: absolute;
+    left: 53px;
+    top: 120px;
+    width: 290px;
+    color: #ccc;
+    display: none;
+}
+
+div#input_panel input {
+    width: 20px;
+    padding: 5px 0px 0px 10px;
+    font-family: "minecraftia";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    color: #ccc;
+    background: #333;
+    border: 1px solid #999;
+}
+
+div#warning_container {
+    font: 1em 'Open Sans', sans-serif;
+    /*border: 2px solid #7c3636;*/
+    background: #111;
+    position: absolute;
+    height: 598px;
+    width: 1024px;
+    z-index: 10;
+    display: none;
+}
+
+div#warning {
+    color: #ffa8a8;
+    border: 2px solid #7c3636;
+    background: #2d2121;
+    margin: 60px 292px;
+    padding: 20px;
+    height: 170px;
+    width: 440px;
+    z-index: 11;
+}
+
+div#dismiss_warning {
+    border: 1px solid #7c3636;
+    color: #ffa8a8;
+    /*font-weight: bold;*/
+    position: absolute;
+    padding: 1px 8px 1px 8px;
+    top: 240px;
+    left: 676px;
+    height: 20px;
+    width: 74px;
+    cursor: pointer;
+}
+
+div#noop_expl {
+    font: 1.1em 'Open Sans', sans-serif;
+    border: 1px solid #999;
+    background: #333;
+    color: #ccc;
+    /*font-weight: bold;*/
+    position: absolute;
+    padding: 2px 25px;
+    top: 54px;
+    left: 216px;
+    /*height: 444px;*/
+    width: 570px;
+    z-index: 7;
+    display: none;
+}
+
+div#noop_expl a { 
+    text-decoration: none;
+    color: #777;
+}
+
+div#noop_expl a:hover { 
+    text-decoration: underline;
+    color: #ccc;
+}
+
+button.noop_expl_btn {
+    background-color: #444;
+    border: 1px solid #999;
+    color: #ccc;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 1em 'Open Sans', sans-serif;
+    width: 80px;
+    cursor: pointer;
+    margin: 5px 0px 0px 230px;
+}
+
+div#transcript {
+    position: absolute;
+    bottom: 240px;
+    right: 0px;
+    /*max-height: 98%;*/
+    width: 12%;
+    /*border-bottom: 1px solid #555;*/
+    font-size: 0.8em;
+    color: #555;
+    vertical-align: bottom;
+    padding: 0px 10px 0px 2px;
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+}
+
+div.margin_bottom{
+    margin-bottom: 100px;
+}
+
+div.uberspace_badge {
+    position: relative;
+    margin: 20px 0px 0px 20px;
+    padding: 10px 16px 15px 15px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+div#menu_reference {
+    position: absolute;
+    font: 0.8em 'Open Sans', sans-serif;
+    top: 601px;
+    left: 460px;
+    color: #444;
+}

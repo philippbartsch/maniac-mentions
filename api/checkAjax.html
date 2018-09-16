@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Check Ajax</title>
+        
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="ip"></div>
+            <div id="ua"></div>
+            <div id="vc"></div>
+            <div id="la"></div>
+        </div>
+        
+
+        <script>
+            var ajax = new XMLHttpRequest();
+            var ajaxResponseArray = [];
+            var ipAddress;
+            var userAgent;
+            var visitorCount;
+            var language;
+                
+            if (ajax != null) {
+                ajax.overrideMimeType('text/xml'); // when txt
+                ajax.open('GET', 'response.php?check=checked', true);
+                ajax.onreadystatechange = function() {
+                    if(this.readyState == 4) {//console.log(this.status);
+                        if(this.status == 200) {
+                            // console.warn(this.responseText);
+                            ajaxResponseArray = this.responseText.split('|');
+                            ipAddress = ajaxResponseArray[0];
+                            userAgent = ajaxResponseArray[1];
+                            visitorCount = ajaxResponseArray[2];
+                            language = ajaxResponseArray[3];
+                            document.getElementById('ip').innerHTML = '<b>IP: </b>' + ipAddress;
+                            document.getElementById('ua').innerHTML = '<b>userAgent: </b>' + userAgent;   
+                            document.getElementById('vc').innerHTML = '<b>Visitors: </b>' + visitorCount;
+                            document.getElementById('la').innerHTML = '<b>Language: </b>' + language;
+                        }
+                    }
+                }
+                ajax.send(null);
+            }
+            // alert(ajaxResponseArray[0]);
+
+           
+        </script>
+   </body>
+   
+</html>

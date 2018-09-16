@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+    <head>
+        <title>Maniac Mentions</title>
+        
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="Point-and-Click Adventure Game">
+        <meta name="keywords" content="Game, Adventure, Point-and-Click, JavaScript, Adventure Game, Maniac Mansion, Retro, maniac mention">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Philipp Bartsch">
+        <meta name="designer" content="Philipp Bartsch">
+        <meta name="publisher" content="Philipp Bartsch">
+        <meta name="distribution" content="web">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" href="img/apple_touch_icon.png">
+        <!-- <link rel="icon" href="img/icon_32.png" sizes="32x32"> -->
+        <link rel="icon" href="img/icon_192.png" sizes="192x192">
+        <link rel="preload" href="css/minecraftia.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        
+        <script src="js/ua-parser.min.js"></script>
+        <script src="js/pxloader-images.min.js"></script>
+        <script src="js/pathfinding.inc.js"></script>
+        <script src="js/resources.js"></script>
+        <script src="js/classes.inc.js"></script>
+        <script src="js/functions.inc.js"></script>
+
+        <!-- <script src="js/bennet1.js"></script> -->
+    </head>
+
+    <body>
+        <h1>Maniac Mentions</h1>
+        <h2>A Game by Philipp Bartsch</h2>
+        
+        <div id="transcript"></div>
+
+        <div id="skyline_footer">
+            <div id="imprint_link">Lorem Ipsum</div>
+            <div id="visitor_count">Lorem Ipsum</div>
+            <div id="version"> | v.93</div>
+        </div>
+
+    <!-- Imprint  start -->
+    <!-- eng -->
+        <div id="imprint_screen_eng" class="imprint_screen">
+            <div class="tiles_row">
+                <div class="tiles float_left big_tile">
+                    <h4>Maniac Mentions</h4>
+                    c/o Philipp Bartsch<br>
+                    Halle (Saale), Germany
+                    <p>
+                        info@maniac-mentions.com<br>
+                        GnuPG – <abbr title="349E 7E51 60EC A2FB 74CA F4E5 32D5 1364 EFBC 01EA" class="grey_txt">EFBC01EA</abbr> | <a href="https://keybase.io/bartsch">keybase.io/bartsch</a><br>
+                        BTC – <span class="grey_txt">15hc96GohYVq7vFcMHgE7BX4X6BxbPufe5</span>
+                    </p>
+                </div>
+                <div class="tiles float_left">
+                    <h4>Coding & Graphics</h4>
+                    Philipp Bartsch
+                    <h4>Accoustic Guitar</h4>
+                    Jason Shaw  – <a href="http://audionautix.com/">audionautix.com</a><br>
+                    <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">(cc by 3.0)</a>
+                </div>
+                <div class="tiles float_left">
+                    <h4>License</h4>
+                    If not stated otherwise:<br><a href="https://creativecommons.org/licenses/by/4.0/">(cc by 4.0)</a> applies to all content.<br>
+                </div>           
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>Cookies</h4>
+                    Cookies are set for the purpose of saving the progress of the game and for measuring the correct number of visitors to the site.<br>
+                    <span class="grey_txt">No Tracking, no data gathering, no futher analytics!</span>
+                </div>
+                <div class="tiles">
+                    <h4>Bibliotheken</h4>
+                    PxLoader – <a href="http://thinkpixellab.com/pxloader/">thinkpixellab.com</a> |
+                    <a href="https://opensource.org/licenses/mit-license.php">(MIT License)</a><br>
+                    PathFinding.js – <a href="https://github.com/qiao/PathFinding.js">github.com</a> |
+                    <a href="https://opensource.org/licenses/mit-license.php">(MIT License)</a><br>
+                    ua-parser-js – <a href="https://github.com/faisalman/ua-parser-js">github.com</a> |
+                    <a href="https://github.com/faisalman/ua-parser-js">(GPLv2 / MIT License)</a>
+                </div>
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>Technical Advise</h4>
+                    The browsers tested are listed below in descending order of compatibility for this application:
+                    <p>
+                        Chrome <span class="grey_txt">v64+ (recommended – best performance)</span><br>
+                        Firefox <span class="grey_txt">v58+ (recommended)</span><br>
+                        Safari <span class="grey_txt">v11.1 (recommended)</span><br>
+                        Vivaldi <span class="grey_txt">1.13+ </span><br>
+                        Internet Explorer <span class="grey_txt">v11 (not recommended)</span><br>
+                        Edge <span class="grey_txt">v41+ (not recommended)</span>
+                    </p>
+                </div>
+                <div class="tiles float_left">
+                    <h4>Known Technical Issues</h4>
+                    Disappearance of mouse pointer <span class="grey_txt">(Edge)</span><br>
+                    Poor performance <span class="grey_txt">(IE, Edge)</span><br>
+                    Inconsistent <i>Fast Mode</i> <span class="grey_txt">(experimental)</span>
+                    <p>
+                        Feel free to write me, if you find a bug!
+                    </p>
+                </div>
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>External Links</h4>
+                    I always check websites to which I link for legally questionable contents to the best of my knowledge and belief. 
+                    However, I can't guarantee that all contents of the linked page correspond to the full extent of applicable law at the time of setting the link or afterwards.
+                    The provider of the site is solely responsible for the contents of the linked site.
+                </div>
+                <div class="tiles float_left">
+                    <h4>Visions of the future</h4>
+                    Illustrations of imaginative destinations on foreign worlds – <a href="https://www.jpl.nasa.gov/visions-of-the-future/">jpl.nasa.gov</a><br>
+                    <a href="https://www.jpl.nasa.gov/imagepolicy/">JPL image use policy</a><br>
+                </div>
+            </div>
+            <div class="uberspace_badge">
+                <a href=" https://uberspace.de/"><img src="img/uberspace_black.png" alt="uberspace hosting service badge"></a>
+            </div>
+            <div class="float_left back_link" id="back_link_eng">
+                &larr; back
+            </div>  
+        </div>
+    <!-- ger -->
+        <div id="imprint_screen_ger" class="imprint_screen">
+            <div class="tiles_row">
+                <div class="tiles float_left big_tile">
+                    <h4>Maniac Mentions</h4>
+                    c/o Philipp Bartsch<br>
+                    Halle (Saale), Deutschland
+                    <p>
+                        info@maniac-mentions.com<br>
+                        GnuPG – <abbr title="349E 7E51 60EC A2FB 74CA F4E5 32D5 1364 EFBC 01EA" class="grey_txt">EFBC01EA</abbr> | <a href="https://keybase.io/bartsch">keybase.io/bartsch</a><br>
+                        BTC – <span class="grey_txt">15hc96GohYVq7vFcMHgE7BX4X6BxbPufe5</span>
+                    </p>
+                </div>
+                <div class="tiles float_left">
+                    <h4>Programmierung & Gestaltung</h4>
+                    Philipp Bartsch
+                    <h4>Akustische Gitarre</h4>
+                    Jason Shaw  – <a href="http://audionautix.com/">audionautix.com</a><br>
+                    <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">(cc by 3.0)</a>
+                </div>
+                <div class="tiles float_left">
+                    <h4>Lizenz</h4>
+                    Wenn nicht anders vermerkt:<br><a href="https://creativecommons.org/licenses/by/4.0/">(cc by 4.0)</a> für alle Inhalte.<br>
+                </div>           
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>Cookies</h4>
+                    Es werden Cookies gesetzt zum Zweck der Speicherung des Spielfortschritts und zum Erfassen der korrekten Besucherzahl auf der Seite.<br>
+                    <span class="grey_txt">Kein Tracking, kein Sammeln von Daten, keine Analysetools!</span>
+                </div>
+                <div class="tiles">
+                    <h4>Bibliotheken</h4>
+                    PxLoader – <a href="http://thinkpixellab.com/pxloader/">thinkpixellab.com</a> |
+                    <a href="https://opensource.org/licenses/mit-license.php">(MIT License)</a><br>
+                    PathFinding.js – <a href="https://github.com/qiao/PathFinding.js">github.com</a> |
+                    <a href="https://opensource.org/licenses/mit-license.php">(MIT License)</a><br>
+                    ua-parser-js – <a href="https://github.com/faisalman/ua-parser-js">github.com</a> |
+                    <a href="https://github.com/faisalman/ua-parser-js">(GPLv2 / MIT License)</a>
+                </div>
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>Technische Empfehlung</h4>
+                    Eine Liste getesteter Browser in absteigender Reihenfolge ihrer Kompatibilität mit dieser Anwendung:
+                    <p>
+                        Chrome <span class="grey_txt">v64+ (empfohlen – beste Leistung)</span><br>
+                        Firefox <span class="grey_txt">v58+ (empfohlen)</span><br>
+                        Safari <span class="grey_txt">v11.1 (empfohlen)</span><br>
+                        Vivaldi <span class="grey_txt">1.13+ </span><br>
+                        Internet Explorer <span class="grey_txt">v11 (nicht empfohlen)</span><br>
+                        Edge <span class="grey_txt">v41+ (nicht empfohlen)</span>
+                    </p>
+                </div>
+                <div class="tiles float_left">
+                    <h4>Bekannte technische Probleme</h4>
+                    unsichtbarer Mauszeiger <span class="grey_txt">(Edge)</span><br>
+                    schlechte Performanz <span class="grey_txt">(IE, Edge)</span><br>
+                    <i>Schneller Modus</i> inkonsistent <span class="grey_txt">(experimentell)</span>
+                    <p>
+                        Lassen sie es mich wissen, wenn sie einen Fehler finden!
+                    </p>
+                </div>
+            </div>
+            <div class="tiles_row">
+                <div class="tiles float_left">
+                    <h4>Externe Links</h4>
+                    Ich prüfe Webseiten, die ich verlinke, nach bestem Wissen und Gewissen auf rechtlich bedenkliche Inhalte. 
+                    Ich kann jedoch nicht garantieren, dass alle Inhalte der verlinkten Seiten zum Zeitpunkt der Linksetzung oder danach in vollem Umfang geltendem Recht entsprechen. <br>
+                    Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                </div>
+                <div class="tiles float_left">
+                    <h4>Visions of the future</h4>
+                    Illustrationen phantasievoller Reiseziele auf fremden Welten – <a href="https://www.jpl.nasa.gov/visions-of-the-future/">jpl.nasa.gov</a><br>
+                    <a href="https://www.jpl.nasa.gov/imagepolicy/">JPL image use policy</a><br>
+                </div>
+            </div>
+            <div class="uberspace_badge">
+                <a href=" https://uberspace.de/"><img src="img/uberspace_black.png" alt="uberspace hosting service badge"></a>
+            </div>
+            <div class="float_left back_link" id="back_link_ger">
+                &larr; zurück
+            </div>  
+        </div>
+    <!-- Imprint end -->
+
+        <div id="mobile_screen">
+            <div>
+                <p><i>Maniac Mentions</i> is a classic point-and-click adventure game and should be used with mouse as input device.</p>
+                <hr>
+                <p><i>Behämmerte Bemerkungen</i> ist ein klassisches Point-and-click Adventure und sollte unbedingt mit einer Maus als Eingabegerät bedient werden.</p>
+                <p class="darkred_txt">not recommendet / nicht empfohlen</p>
+                <button type="button" id="mobileBtn">Continue / Fortfahren</button>
+                <p class="darkgrey_txt">Maniac Mentions<br>c/o Philipp Bartsch<br>Halle (Saale), Germany</p>
+            </div>
+        </div>
+        
+        <div id="loading_screen">
+            <div id="loading_counter"></div>
+            <div id="loading_bar_container">
+                <div id="loading_bar"></div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="warning_container"><div id="warning">Lorem Ipsum</div><div id="dismiss_warning">Dismiss</div></div>
+            <div id="mouseFollow"></div>
+            <div id="input_panel">
+                <input type="text" class="digits" id="d1" name="d1" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d2" name="d2" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d3" name="d3" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d4" name="d4" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d5" name="d5" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d6" name="d6" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d7" name="d7" placeholder="_" maxLength="1" />
+                <input type="text" class="digits" id="d8" name="d8" placeholder="_" maxLength="1" />
+            </div>
+            <div id="noop_expl">
+                Lorem Ipsum
+            </div>
+            <div id="menu_reference">
+                Press ESC to enter Menu
+            </div>
+        </div>
+        
+        <div id="glitch"></div>
+        <div id="glitch2"></div>
+       
+        <script src="js/canvas.js"></script>
+        <!-- <script src="js/bennet2.js"></script> -->
+   </body>
+   
+</html>
