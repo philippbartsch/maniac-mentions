@@ -13,5 +13,10 @@ Old school Point-and-Click Adventure Game | [maniac-mentions.com](https://maniac
 - pathfinding: [PathFinding.js](https://github.com/qiao/PathFinding.js/)
 - user agent parser: [ua-parser-js](https://github.com/faisalman/ua-parser-js/)
 
+## Known Technical Issues
+- Disappearance of mouse pointer (MS Edge)
+- Poor performance (MS IE, MS Edge)
+- Inconsistent _Fast Mode_ (experimental)
+
 ## License
 If not stated otherwise: [(cc by 4.0)](https://creativecommons.org/licenses/by/4.0/) applies to all content.
